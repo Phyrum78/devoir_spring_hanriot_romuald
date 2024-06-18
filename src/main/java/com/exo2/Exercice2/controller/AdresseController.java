@@ -1,8 +1,12 @@
 package com.exo2.Exercice2.controller;
 
 import com.exo2.Exercice2.dto.AdresseDto;
+import com.exo2.Exercice2.dto.EcoleDto;
 import com.exo2.Exercice2.service.AdresseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,10 +24,16 @@ public class AdresseController {
         return ResponseEntity.ok(adresseService.findById(id));
     }
 
-    @GetMapping
+    /*@GetMapping
     public ResponseEntity<List<AdresseDto>> findAll()
     {
         return ResponseEntity.ok(adresseService.findAll());
+    }*/
+
+    @GetMapping
+    public ResponseEntity<List<AdresseDto>> findAll(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return new ResponseEntity<>(adresseService.findAll(pageable), HttpStatus.OK);
     }
 
     @GetMapping("/findBy")

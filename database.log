@@ -1,0 +1,26 @@
+1718716035101|12|statement|select * from information_schema.sequences
+1718716035146|6|statement|create index idx_ecole_nom_domaine on ecole (nom_ecole, domaine)
+1718716035201|2|statement|select * from "public"."adresse" where 1=0
+1718716035220|1|statement|select * from "public"."ecole" where 1=0
+1718716035237|2|statement|select * from "public"."etudiant" where 1=0
+1718716035247|2|statement|select * from "public"."projet" where 1=0
+1718716144790|30|statement|insert into etudiant (ecole_id,nom,prenom) values (NULL,'Adolf','Hitler')
+1718716144824|7|commit|
+1718716166294|3|statement|insert into etudiant (ecole_id,nom,prenom) values (NULL,'Staline','Josef')
+1718716166297|2|commit|
+1718716270725|25|statement|select e1_0.etudiant_id,e1_0.ecole_id,e1_0.nom,e1_0.prenom from etudiant e1_0
+1718716270774|1|commit|
+1718716270812|17|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=1
+1718716270816|2|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=2
+1718716314769|7|statement|insert into etudiant (ecole_id,nom,prenom) values (NULL,'Bardella','Jordan')
+1718716314778|4|commit|
+1718716329457|2|statement|select e1_0.etudiant_id,e1_0.ecole_id,e1_0.nom,e1_0.prenom from etudiant e1_0
+1718716329463|1|commit|
+1718716329466|1|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=1
+1718716329470|1|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=2
+1718716329473|2|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=3
+1718716489360|17|statement|select e1_0.etudiant_id,e1_0.ecole_id,e1_0.nom,e1_0.prenom from etudiant e1_0
+1718716489370|2|commit|
+1718716489379|5|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=1
+1718716489381|1|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=2
+1718716489383|1|statement|select p1_0.etudiant_id,p1_1.projet_id,p1_1.nom_projet from etudiant_projet p1_0 join projet p1_1 on p1_1.projet_id=p1_0.projet_id where p1_0.etudiant_id=3
